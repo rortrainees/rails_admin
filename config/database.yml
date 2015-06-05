@@ -27,14 +27,14 @@
 
 
 
-default: &default
-  adapter: postgresql
-  encoding: unicode
+#default: &default
+ #adapter: postgresql
+  #encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
+  #pool: 5
 
-#development:
+ #development:
  # <<: *default
   #database: railsadmin_development
 
@@ -63,7 +63,7 @@ default: &default
   #   debug5, debug4, debug3, debug2, debug1,
   #   log, notice, warning, error, fatal, and panic
   # Defaults to warning.
-  #min_messages: notice
+ # min_messages: notice
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -111,3 +111,7 @@ production:
 #  database: railsadmin_production
 #  username:  railsadmin
 #  password: <%= ENV['RAILSADMIN_DATABASE_PASSWORD'] %>
+
+
+
+
