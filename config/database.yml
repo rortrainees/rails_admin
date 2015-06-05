@@ -68,9 +68,24 @@ default: &default
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: railsadmin_test
+#test:
+# <<: *default
+#  database: railsadmin_test
+
+production:
+  url: postgres://wmxspeffuyqsgp:k-8vjBkDV0zaWWNlFhZQl3aoq0@ec2-54-83-57-86.compute-1.amazonaws.com:5432/dber0ki2t7en8a
+  host: ec2-54-83-57-86.compute-1.amazonaws.com
+  port: 5432
+  adapter: postgresql
+  encoding: unicode
+  database: dber0ki2t7en8a
+  pool: 5
+  username: wmxspeffuyqsgp
+  password: k-8vjBkDV0zaWWNlFhZQl3aoq0
+
+
+
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -91,8 +106,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: railsadmin_production
-  username:  railsadmin
-  password: <%= ENV['RAILSADMIN_DATABASE_PASSWORD'] %>
+#production:
+#  <<: *default
+#  database: railsadmin_production
+#  username:  railsadmin
+#  password: <%= ENV['RAILSADMIN_DATABASE_PASSWORD'] %>
